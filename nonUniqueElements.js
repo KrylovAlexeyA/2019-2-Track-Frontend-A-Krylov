@@ -26,5 +26,26 @@ nonUniqueElements([10, 9, 10, 10, 9, 8]) == [10, 9, 10, 10, 9]
 
 export default function nonUniqueElements(data) {
   // your solution goes here
+  let indexes = new Array();
+  for (let i = 0; i < data.length; i++ ){
+    let element = data[i]
+    let counter = 0;
+    for (let k = 0; k < data.length; k++){
+      if (element == data[k]){
+        counter++
+      }
+    }
+    if (counter == 1){
+      for (let l = 0; l < data.length; l++){
+        if (element == data[l]){
+          indexes.push(l)
+        }
+      }
+    }
+  }
+  indexes.sort().reverse();
+  for (let n = 0; n < indexes.length; n++){
+    data.splice(indexes[n], 1);
+  }
   return data
 }

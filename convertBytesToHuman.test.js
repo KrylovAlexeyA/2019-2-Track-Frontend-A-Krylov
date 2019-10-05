@@ -20,7 +20,12 @@ test('Возвращает false для неправильного типа да
 });
 
 test('Возвращает корректное значение для чисел', () => {
-  expect(convertBytesToHuman(1024*1024 * 2.12312)).toBe("2.123MB")
+  expect(convertBytesToHuman(1000 * 1.23)).toBe("1.201 KB")
+  // ...
+});
+
+test('Возвращает корректное значение для чисел', () => {
+  expect(convertBytesToHuman(1024*1024 * 2.12312)).toBe("2.123 MB")
   // ...
 });
 

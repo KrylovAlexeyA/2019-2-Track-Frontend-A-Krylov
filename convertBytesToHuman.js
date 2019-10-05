@@ -27,7 +27,7 @@ export default function convertBytesToHuman(bytes) {
     return `${(bytes/1024).toFixed(3)} KB`
   }
   if (bytes > (1024 * 1024) && bytes < (1024 * 1024 * 1024)) {
-    return `${(bytes/(1024 * 1024)).toFixed(3) }MB`
+    return `${(bytes/(1024 * 1024)).toFixed(3) } MB`
   }
   if (bytes > (1024 * 1024 * 1024) && bytes < (1024 * 1024 * 1024 * 1024)) {
     return `${(bytes/(1024 * 1024 * 1024)).toFixed(3)} GB`
