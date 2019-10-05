@@ -14,4 +14,23 @@
 
 export default function convertBytesToHuman(bytes) {
   // your solution goes here
+  if (!(typeof bytes == "number")){
+    return false
+  }
+  if (bytes < 0){
+    return false
+  }
+  if (bytes < 1024){
+    return `${bytes.toFixed(3)} B`
+  }
+  if (bytes > 1024 && bytes < (1024 * 1024)){
+    return `${(bytes/1024).toFixed(3)} KB`
+  }
+  if (bytes > (1024 * 1024) && bytes < (1024 * 1024 * 1024)) {
+    return `${(bytes/(1024 * 1024)).toFixed(3) }MB`
+  }
+  if (bytes > (1024 * 1024 * 1024) && bytes < (1024 * 1024 * 1024 * 1024)) {
+    return `${(bytes/(1024 * 1024 * 1024)).toFixed(3)} GB`
+  }
+  return false
 }
