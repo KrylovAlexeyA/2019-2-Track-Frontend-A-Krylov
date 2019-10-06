@@ -147,3 +147,8 @@ jest_*/
 .jscpd/
 
 .idea
+
+web-components/.idea/
+web-components/node_modules/
+web-components/build/
+web-components/false/
